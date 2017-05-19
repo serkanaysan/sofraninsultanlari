@@ -14,7 +14,8 @@
                 xfbml      : true,
                 version    : 'v2.8'
             });
-            FB.AppEvents.logPageView();   
+            FB.AppEvents.logPageView();
+            fbInit();
         };
 
         (function(d, s, id){
@@ -32,7 +33,7 @@
                 <img src="assets/img/logo.png" />
             </div>
         </div>
-        <div class="row" style="text-align: center;">
+        <div class="row" style="text-align: center; margin-bottom: 20px;">
             <div class="col-sm-12">
                 <h3>Elinizdeki malzemeler ile<br>yemek tariflerini gör,<br>iftar sofranı oluştur!</h3>
             </div>
@@ -43,10 +44,15 @@
                 <img src="assets/img/paketler.png" />
             </div>
             <div class="col-sm-12" style="margin-top: 20px;">
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="btn btn-primary">Facebook ile bağlan</fb:login-button>
+                <a id="fb-log-in" onclick="fbLogIn();" href="#" class="btn btn-primary" style="background-color: #4267b2; font-size: 16px;"></a>
+            </div>
+            <div id="fb-log-out" class="col-sm-12" style="margin-top: 5px; display: none;">
+                <a onclick="fbLogOut();" href="#" class="btn btn-primary" style="background-color: #4267b2;">Çıkış Yap</span></a>
+            </div>
+            <div class="col-sm-12">
                 <div class="checkbox">
                     <small>
-                        <input type="checkbox"> Katılım koşullarını okudum ve kabul ediyorum.
+                        <input id="katilimkosullarionay" type="checkbox"> Katılım koşullarını okudum ve kabul ediyorum.
                     </small>
                 </div>
             </div>

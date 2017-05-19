@@ -1,24 +1,36 @@
-var $item = $('.carousel .item'); 
-var $wHeight = $(window).height();
-$item.eq(0).addClass('active');
-$item.height($wHeight); 
-$item.addClass('full-screen');
+function fbInit(){
+    FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+            $('#fb-log-out').css('display', 'block');
+            FB.api('/me?fields=first_name,name,picture.type(normal),gender', function(user) {
+                $('#fb-log-in').html('<i class="fa fa-facebook-official" aria-hidden="true" style="margin-right: 5px;"></i> ' + user.first_name + ' olarak devam et <img src="' + user.picture.data.url + '" style="height: 40px; margin-left: 10px;" />').css('padding','0px 0px 0px 12px').css('border','none');
+                
+            });
+        }
+        else{
+            $('#fb-log-in').html('<i class="fa fa-facebook-official" aria-hidden="true" style="margin-right: 5px;"></i>Facebook ile bağlan');
+        }
+    });
+}
 
+function fbLogOut(){
+    FB.logout(function(response) {
+        location.reload();
+     });
+}
 
-$(window).on('resize', function (){
-  $wHeight = $(window).height();
-  $item.height($wHeight);
-});
-
-$('.carousel').carousel({
-  interval: false,
-  pause: "true"
-});
+function fbLogIn(){
+    if($('#katilimkosullarionay')[0].checked){
+        FB.login(function(response) {
+            checkLoginState();
+        }, {scope: 'public_profile,email'});
+    }
+    else{
+        $('.checkbox').css('color','red');
+    }
+}
 
 function checkLoginState() {
-    FB.logout(function(response) {
-        // user is now logged out
-    });
     FB.getLoginStatus(function(response) {
         statusChangeCallback(response);
     });
@@ -61,3 +73,4 @@ function changeContainer(id){
     $('.maggi-container').css('display','none');
     $('#'+id).fadeIn('slow');
 }
+
