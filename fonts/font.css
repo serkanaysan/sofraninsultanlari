@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Cocon-Light';
+  src: url('Cocon-Light.eot');
+  src: url('Cocon-Light.woff2') format('woff2'),
+       url('Cocon-Light.woff') format('woff'),
+       url('Cocon-Light.ttf') format('truetype'),
+       url('Cocon-Light.svg#Cocon-Light') format('svg'),
+       url('Cocon-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

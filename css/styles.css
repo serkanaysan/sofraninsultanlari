@@ -28,14 +28,44 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Cocon-Light';
+  src: url('../fonts/Cocon-Light.eot');
+  src: url('../fonts/Cocon-Light.woff2') format('woff2'),
+       url('../fonts/Cocon-Light.woff') format('woff'),
+       url('../fonts/Cocon-Light.ttf') format('truetype'),
+       url('../fonts/Cocon-Light.svg#Cocon-Light') format('svg'),
+       url('../fonts/Cocon-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body{
-    background-color: #fdee0d;
-    font-family: 'HelveticaNeue', helvetica, sans-serif;
+    font-family: 'Cocon-Light', helvetica, sans-serif;
+    background-color: #F8AE01;
+    
+}
+
+#container-1{
+    background-color: #B9C5CC;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Cocon-RegularTR', helvetica, sans-serif;
-    color: #545657;
+    color: #FFF;
+}
+
+.helvetica-neue{
+    font-family: 'HelveticaNeue', helvetica, sans-serif;
+}
+
+.cocon-bold{
+    font-family: 'Cocon-RegularTR', helvetica, sans-serif;
+}
+
+.opacity0{
+    opacity: 0;
 }
 
 .maggi-container{
@@ -52,13 +82,233 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 4px;
 }
 
+.btn-maggi-yellow{
+    background-color: #FBDE01;
+    border-color: #9F8E0B;
+    color: #645800;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 24px;
+}
+
+.btn-gray{
+    color: #fff;
+    border-color: #484848;
+    background-color: #484848;
+    border-radius: 10px;
+    font-size: 16px;
+    height: 50px;
+    line-height: 34px;
+}
+
+.form-control{
+    text-align: center;
+    border: none;
+}
+
+.material{
+    margin-top: 10px;
+    margin-bottom: 3px;
+    color: #545657;
+}
 
 
-@media (max-width: 375px) {
-    body{
-        background-image: url(../assets/img/mahya.png);
-        background-repeat: no-repeat;
-        background-size: 100% auto;
+
+
+
+.img-recipe{
+    height: 130px;
+    padding: 5px;
+    margin: 0 40px 10px 40px;
+    border-radius:0 0 6px 6px;
+    padding: 0;
+}
+
+.img-user-choose{
+    height: 130px;
+    border-radius:0 0 6px 6px;
+    margin-bottom: 25px;
+}
+
+.img-user-choose img{
+    border-radius: 0 0 6px 6px;
+}
+
+.label-recipe{
+    font-size: 15px;
+    margin-top: 107px;
+}
+
+.label-danger{
+    background-color: #e52222;
+    font-size: 90%;
+}
+
+.label-success{
+    background-color: #56cb45;
+    font-size: 90%;
+}
+
+.form-control{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.btn-white, a.btn-white:link,  a.btn-white:active,  a.btn-white:hover,  a.btn-white:visited{
+    border: 1px #FFF solid;
+    background-color: transparent;
+    color: #FFF;
+    height: 44px;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 26px;
+    opacity: 0.5;
+}
+
+.btn-green, a.btn-green:link,  a.btn-green:active,  a.btn-green:hover,  a.btn-green:visited{
+    border: 1px #7fcc32 solid;
+    background-color: #7fcc32;
+    color: #FFF;
+    height: 44px;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 26px;
+    opacity: 0.5;
+    font-family: 'Cocon-RegularTR', helvetica, sans-serif;
+}
+
+#recipes h4, #test h4{
+    margin: 0px; 
+    padding-top: 3px; 
+    padding-bottom: 3px; 
+    background: rgba(0, 0, 0, .1); 
+    border-radius: 6px 6px 0 0; 
+    font-size: 16px; 
+    text-align: left; 
+    padding-left: 6px;
+}
+
+#recipes h4 small{
+    margin-right: 5px; 
+    line-height: 15px; 
+    color: rgba(255,255,255,.5); 
+    font-size: 15px;
+    
+}
+
+.recipe-panel{
+    font-size: 12px;
+}
+
+.thumbnail .caption{
+    text-align: center;
+   
+}
+
+.thumbnail{
+     border: none;
+     margin-bottom: 0px;
+     min-height: 142px;
+     margin-bottom: 10px;
+     
+}
+.thumbnail.active{
+    background: #6AD59B;
+    color: #fff;
+}
+
+.thumbnail.passive{
+    opacity: 0.5;
+}
+
+.thumbnail.active p{
+    color: #fff;
+}
+
+.desert{
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.modal-header{
+    padding: 15px 15px 5px 15px;
+}
+
+.thumbnail p{
+    margin: 0;
+}
+
+.bc-wrapper .bc-menu{
+    width: 80% !important;
+    margin-left: 10%;
+    text-transform: capitalize;
+}
+
+input{
+    text-transform: capitalize;
+}
+
+
+
+@media screen and (max-width: 340px) and (min-width: 280px) { 
+    .btn-gray{
+        color: #fff;
+        border-color: #484848;
+        background-color: #484848;
+        border-radius: 10px;
+        font-size: 13px;
+        height: 40px;
+        line-height: 25px;
+    }
+    #recipes h4{
+        margin: 0px; 
+        padding-top: 3px; 
+        padding-bottom: 3px; 
+        background: rgba(0, 0, 0, .1); 
+        border-radius: 6px 6px 0 0; 
+        font-size: 12px; 
+        text-align: left; 
+        padding-left: 6px;
+    }
+
+    #recipes h4 small{
+        margin-right: 5px; 
+        line-height: 15px; 
+        color: rgba(255,255,255,.5); 
+        font-size: 11px;
+
     }
     
+    .label-recipe {
+        font-size: 12px;
+        margin-top: 112px;
+    }
+    
+    .recipe-panel{
+        font-size: 11px;
+    }
+    .label-danger{
+        font-size: 75%;
+    }
+    .label-success{
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 414px) {
+    #container-1{
+        background-image: url(../assets/img/main-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position-y: 0;
+    }
+    
+    .maggi-container{
+        background-image: url(../assets/img/mahya-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-color: #F8AE01;
+        background-position-y: -75px;
+    } 
 }
