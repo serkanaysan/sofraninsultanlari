@@ -9,4 +9,5 @@
 
 <script src="dist/jquery.bootcomplete.js"></script>
 
-<script src="js/main.js"></script>
+<script src="js/ntc.js"></script>
+<script src="js/main.js?v5"></script>

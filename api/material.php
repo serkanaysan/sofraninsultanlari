@@ -3,7 +3,10 @@
 include("../backend/dbConfig.php");
 
 if(isset($_GET["query"])){
-    $query = "SELECT id as value, title as label  FROM material WHERE title like '".$_GET["query"]."%' Order By title";
+    $query = "SELECT id as value, title as label  FROM material WHERE title like '%".$_GET["query"]."%' Order By title LIMIT 4";
+}
+else if($_POST["colorcode"]){
+    $query = "SELECT * FROM material Where colorcode='".$_POST["colorcode"]."'";
 }
 else{
     $query = "SELECT * FROM material";

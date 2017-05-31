@@ -1,8 +1,18 @@
 <?php
+$servername = "94.73.148.62";
+$username = "user016AF2";
+$password = "THoh72G0";
+$dbname = "db016AF2";
+
+
+/*
 $servername = "localhost";
 $username = "root";
 $password = "Aa123456";
-$dbname = "sofraninsultanlari";
+$dbname = "sofraninsultanlari";*/
+
+
+
 
 
 // Create connection

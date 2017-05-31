@@ -251,6 +251,23 @@ input{
 
 
 
+.btn-multiline, .btn-multiline:focus,  .btn-multiline:hover{
+    width: 120px;
+    white-space: inherit;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 10px;
+}
+
+.col-camera{
+    padding-right: 0;
+    padding-left: 0;
+    margin: 5px;
+    width: calc(33.33333333% - 10px);
+}
+
+
+
 @media screen and (max-width: 340px) and (min-width: 280px) { 
     .btn-gray{
         color: #fff;
@@ -294,6 +311,8 @@ input{
     .label-success{
         font-size: 90%;
     }
+    
+    
 }
 
 @media (max-width: 414px) {

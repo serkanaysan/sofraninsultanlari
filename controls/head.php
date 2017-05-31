@@ -2,7 +2,8 @@
     
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
@@ -23,3 +24,11 @@
 <link rel="stylesheet" href="dist/bootcomplete.css">
 
 <script type="text/javascript" src="js/html2canvas.js"></script>
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Elindeki malzemeler ile iftar menünü oluştur, her gün 250 TL kazanma şansı yakala." />
+<meta property="og:description" content="Her gün yeniden katılma fırsatı ile kazanma şansını arttır!" />
+
+<meta property="og:image" content="http://sofraninsultanlari.themediamove.com/assets/img/fb-share-v2.png" />
+<meta property="og:url" content="http://sofraninsultanlari.themediamove.com/" />

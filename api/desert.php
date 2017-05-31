@@ -3,10 +3,10 @@
 include("../backend/dbConfig.php");
 
 if(isset($_GET["query"])){
-    $query = "SELECT id , title  FROM recipe WHERE id=".$_POST["query"]." typeid=2 Order By title";
+    $query = "SELECT id , title  FROM recipe WHERE id=".$_POST["query"]." typeid=4 Order By title";
 }
 else{
-    $query = "SELECT id , title, imageurl  FROM recipe WHERE typeid=1 Order By title LIMIT 6;";
+    $query = "SELECT id , title, imageurl  FROM recipe WHERE typeid=4 Order By title";
 }
 
 //execute query
